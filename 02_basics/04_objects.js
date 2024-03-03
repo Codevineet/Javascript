@@ -45,8 +45,18 @@ const emails = [
     }
 ]
 
-console.log(emails[0].id);
+// console.log(emails[0].id);
 
-console.log(Object.keys(user));
-console.log(Object.values(user));
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+
+const course = {
+    name:"Js in Hindi",
+    cost:999,
+    instructorName:"Vineet Jindal",
+}
+
+//this is called as destructuring.
+const {name , cost , instructorName} = course;
+console.log(cost);
 
