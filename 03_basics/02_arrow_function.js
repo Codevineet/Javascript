@@ -43,3 +43,11 @@ console.log(arrowFunction('Vineet Jindal'));
     //unnamed IIFE
     console.log(`DB is connected ${name}`)
 })("Mr. Vineet Jindal");
+
+
+//checking object is empty or not
+const x = {};
+
+if(Object.keys(x).length === 0){
+    console.log("object is empty");
+}
