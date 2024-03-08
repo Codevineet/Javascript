@@ -1,0 +1,23 @@
+body{
+    background-color: grey;
+}
+
+.container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.clock{
+    background-color: white;
+    color:red;
+    font-size: 100px;
+    padding:50px;
+    border-radius: 10px;
+}
+
