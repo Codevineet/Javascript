@@ -1,0 +1,36 @@
+.container{
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.box{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxes{
+  height:50px;
+  width:50px;
+  background-color: red;
+  padding:20px;
+  margin:20px;
+  cursor: pointer;
+  border:2px solid black;
+}
+
+#orange{
+  background-color: orange;
+}
+
+#red{
+  background-color: red;
+}
+#green{
+  background-color: green;
+}
+#white{
+  background-color: white;
+}
