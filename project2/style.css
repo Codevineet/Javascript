@@ -1,0 +1,22 @@
+body{
+    background-color: #212121;
+}
+
+.container{
+    background-color: white;
+    color:black;
+    display:flex;
+    flex-direction: column;
+    width:300px;
+    padding:20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#results{
+    margin-top: 10px;
+    /* color:red; */
+    font-size: 20px;
+    font-weight: bold;
+}
