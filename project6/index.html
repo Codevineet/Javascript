@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Stroke Display</title>
+</head>
+<body>
+    <div class="keystroke"></div>
+</body>
+<script>
+    let show = document.querySelector('.keystroke');
+    window.addEventListener('keydown' , (e)=>{
+        console.log(e.target);
+        show.innerHTML += `${e.key}`;
+    })
+</script>
+</html>
