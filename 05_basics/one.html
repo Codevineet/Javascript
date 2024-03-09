@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+        <div id="container">
+            <h1 id="owl">Owl</h1>
+            <h1 id="tiger">Tiger</h1>
+            <h1 id="dog">Dog</h1>
+            <a href="https://google.com" id="google">click on the link</a>
+        </div>
+</body>
+<script>
+    //old approach
+    // document.getElementById('owl').onclick = function (){
+    //     console.log('clicked');
+    // }
+
+    //attachEvent was used in earlier times
+
+    //type, timestamp, defalutPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keyCode.
+
+    //new Approach
+    // document.getElementById('container').addEventListener('click' , () =>{
+    //     console.log("container clicked");
+    // } , false);
+
+    // document.getElementById('owl').addEventListener('click' , (e) =>{
+    //     e.stopPropagation();
+    //     console.log("owl clicked");
+    // } , false);
+
+    //event propogation always goes from bottom to top like if take the value as false, then it will first
+    //print owl clicked and then container clicked. eg - bubble goes from bottom to top.
+    //if we want to stop the event propogation then we can use e.stopPropogation();
+    //if the value is true it is used for event capturing which goes from top to bottom.
+    
+    // document.getElementById('google').addEventListener('click' , (e)=>{
+    //     e.preventDefault();
+    //     //if we use this, the default function of a tag to render on google is not worked.
+    // })
+
+    document.querySelector('#container').addEventListener('click' , (e)=>{
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'H1'){
+            let target = e.target;
+            target.remove();
+        }
+    })
+
+
+    
+
+
+
+
+
+</script>
+</html>
