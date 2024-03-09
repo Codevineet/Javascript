@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice events </title>
+</head>
+<body>
+    <h1>Javascirpt Callbacks events</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    
+    let start = true;
+    function greet(){
+        console.log("We are learning Javascript");
+    }
+
+    let interval = setInterval(greet, 1000);
+    document.querySelector('#stop').addEventListener('click' , ()=>{
+        clearInterval(interval);
+        start = false;
+        console.log("Event Stopped");
+    });
+
+    document.querySelector('#start').addEventListener('click' , ()=>{
+        setInterval(greet , 1000);
+        start = true;
+        console.log("Event Started");
+    })
+
+</script>
+</html>

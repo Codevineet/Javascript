@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async callbacks</title>
+</head>
+<body>
+    <h1>Learning Async Callbacks</h1>
+    <button class="stop">Stop</button>
+</body>
+
+<script>
+    let h1 = document.querySelector('h1');
+
+    function greet(){
+        console.log('hellow');
+    }
+
+    let greetInfinity = setInterval(greet , 1000);
+    document.querySelector('.stop').addEventListener('click', ()=>{
+        clearInterval(greetInfinity);
+        console.log("Stopped");
+    });
+
+    
+    
+
+    
+</script>
+</html>
