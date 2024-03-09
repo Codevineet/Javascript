@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change the color of background</title>
+</head>
+<body>
+    <h1>Change the background Color</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    let intervalId;
+
+        function changeBgColor(){
+            let array = "0123456789ABCDEF";
+            let randomColor = '#';
+            for(let i = 0; i < 6; i++){
+                randomColor += array[Math.floor(Math.random() * 16)];
+            }
+            return randomColor;
+        }
+
+        document.querySelector('#start').addEventListener('click' , ()=>{
+            if(!intervalId){
+                intervalId = setInterval(function () {
+                    document.body.style.backgroundColor = changeBgColor();
+                } , 100);
+            }
+        })
+
+        document.querySelector('#stop').addEventListener('click' , ()=>{
+            clearInterval(intervalId);
+            intervalId = null;
+        })
+
+</script>
+</html>
