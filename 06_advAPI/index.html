@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API request using XML</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <img src=""  id="photo" alt="photo" height="200px" width="200px">
+    <h3 id="followers"></h3>
+</body>
+<script>
+
+    const nameHTML = document.querySelector('#name');
+    const photoHTML = document.querySelector('#photo');
+    const followers = document.querySelector('#followers');
+
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET' , 'https://api.github.com/users/Codevineet');
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(xhr.responseText);
+            nameHTML.innerHTML = data.login;
+            photoHTML.setAttribute('src' , `${data.avatar_url}`)
+            followers.innerHTML = data.followers;
+
+        }
+    }
+
+    xhr.send();
+    
+</script>
+</html>
