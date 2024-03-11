@@ -10,7 +10,7 @@ const promiseOne = new Promise(function (resolve, reject) {
   //do async tasks
   //DB call, cryptography, network call
   setTimeout(function () {
-    // console.log("hello world");
+    console.log("hello world");
     resolve();
   }, 2000);
 });
@@ -19,18 +19,18 @@ const promiseOne = new Promise(function (resolve, reject) {
 //.then has a direct connection with the resolve.
 //.then also takes a function and returns the value that it got from the promises.
 promiseOne.then(function () {
-//   console.log("promised consumed");
+  console.log("promised consumed");
 });
 
 //*********************************TWO************************************* */
 
 new Promise((resolve, reject) => {
   setTimeout(() => {
-    // console.log("This is the second way of writing the promise");
+    console.log("This is the second way of writing the promise");
     resolve();
   }, 1000);
 }).then(function () {
-//   console.log("The promise has been completed");
+  console.log("The promise has been completed");
 });
 
 //*******************************THREE********************************************** */
@@ -46,7 +46,7 @@ const promiseThird = new Promise((resolve, reject) => {
 
 //here in the function we have an argument, user. which has a object passed by resolve function.
 promiseThird.then(function (user) {
-//   console.log(user.name);
+  console.log(user.name);
 });
 
 //********************************FOUR**************************************** */
@@ -71,16 +71,16 @@ promiseFour
     //now this return will go to the next then call.
   })
   .then((username) =>{
-    // console.log(username);
+    console.log(username);
   })
 
   .catch((error) => {
-    // console.log(error);
+    console.log(error);
   })
   //this finally will always run no matter if we got the response or an error it will give us the final 
   //call for that.
   .finally(() =>{
-    // console.log("The promise is either resolved or rejected");
+    console.log("The promise is either resolved or rejected");
   })
 
 
@@ -112,7 +112,7 @@ async function consumeResponseFive(){
     
 }
 
-// consumeResponseFive();
+consumeResponseFive();
 
 
 //**************************************USING ASYNC AWAIT and FETCH ***********************************/
